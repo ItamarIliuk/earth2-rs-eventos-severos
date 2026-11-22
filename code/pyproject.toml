@@ -1,0 +1,33 @@
+[project]
+name = "earth2-rs"
+version = "0.1.0"
+description = "FourCastNet 3 ensemble hindcasts of severe weather in Rio Grande do Sul (LABRIOT, UTFPR)"
+requires-python = ">=3.13"
+dependencies = [
+    "earth2studio[data,fcn3,precip-afno,windgust-afno]",
+    "torch==2.14.1",
+    "torchvision==0.29.1",
+    "cartopy>=0.26.0",
+    "matplotlib>=3.11.2",
+    "netcdf4>=1.7.2",
+    "numpy>=2.5.5",
+    "ninja>=1.13.2",
+    "setuptools>=84.2.1",
+    "wheel>=0.48.0",
+]
+
+[tool.uv]
+# torch-harmonics e earth2grid compilam contra o torch já instalado
+no-build-isolation-package = ["torch-harmonics", "earth2grid"]
+
+[tool.uv.sources]
+earth2studio = { git = "https://github.com/NVIDIA/earth2studio.git", rev = "0.20.0" }
+# driver com CUDA 12.8: as rodas cu126 funcionam; as do PyPI (cu13x) não
+torch = { index = "pytorch-cu126" }
+torchvision = { index = "pytorch-cu126" }
+torchaudio = { index = "pytorch-cu126" }
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true

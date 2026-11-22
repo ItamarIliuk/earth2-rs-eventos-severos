@@ -1,0 +1,7 @@
+.claude/
+*.nc
+nc/
+figs/
+__pycache__/
+.venv/
+uv.lock

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Earth-2 RS · LABRIOT</title>
+<meta name="description" content="FourCastNet 3 (NVIDIA Earth-2) ensemble hindcasts of the November 20, 2026 storm in Tupanciretã and the May 2024 flood in Rio Grande do Sul, Brazil. LABRIOT, UTFPR.">
+<meta property="og:title" content="Earth-2 RS · LABRIOT">
+<meta property="og:description" content="What an NVIDIA Earth-2 AI model would have seen days before two severe weather events in Rio Grande do Sul, Brazil.">
+<meta property="og:image" content="assets/img/anim_poster.png">
+<link rel="icon" href="assets/img/labriot-logo-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/img/labriot-logo-64.png" alt="">Earth-2 RS</a>
+    <nav class="links">
+      <a href="#temporal"><span lang="pt">O temporal</span><span lang="en">The storm</span></a>
+      <a href="#maio"><span lang="pt">Maio de 2024</span><span lang="en">May 2024</span></a>
+      <a href="#limites"><span lang="pt">Limites</span><span lang="en">Limits</span></a>
+      <a href="#reproduzir"><span lang="pt">Reproduzir</span><span lang="en">Reproduce</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-set-lang="pt" aria-pressed="true">PT</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="hero"><div class="wrap grid">
+  <div>
+    <div class="badges">
+      <span class="badge hl"><span lang="pt">Pesquisa · previsão retrospectiva</span><span lang="en">Research · hindcast</span></span>
+      <span class="badge">LABRIOT · UTFPR</span>
+      <span class="badge">NVIDIA Earth-2</span>
+      <span class="badge">NVIDIA Inception program</span>
+    </div>
+    <h1><span lang="pt">O que a IA teria visto <span class="hl">dias antes</span> do temporal</span><span lang="en">What AI would have seen <span class="hl">days before</span> the storm</span></h1>
+    <p class="lede" lang="pt">Na madrugada de 20 de novembro de 2026, um temporal atingiu Tupanciretã, no Rio Grande do Sul. Voltamos no tempo e rodamos o FourCastNet 3, um dos modelos de IA do NVIDIA Earth-2, a partir das condições de 15 a 18 de novembro, com 24 futuros possíveis em cada rodada.</p>
+    <p class="lede" lang="en">Before dawn on November 20, 2026, a severe storm hit Tupanciretã, in Rio Grande do Sul, Brazil. We went back in time and ran FourCastNet 3, one of the NVIDIA Earth-2 AI models, from the conditions of November 15 to 18, with 24 possible futures in each run.</p>
+    <div class="cta">
+      <a class="btn primary" href="#temporal"><span lang="pt">Ver o resultado</span><span lang="en">See the result</span></a>
+      <a class="btn ghost" href="https://github.com/ItamarIliuk/earth2-rs-eventos-severos"><span lang="pt">Código</span><span lang="en">Code</span></a>
+    </div>
+  </div>
+  <figure class="fig">
+    <video src="assets/video/fcn3_rs_anim_k.mp4" poster="assets/img/anim_poster.png" width="1920" height="1080" autoplay muted loop playsinline controls aria-label="Animation of the FourCastNet 3 forecast made on November 15: water vapour and 850 hPa wind move from the north over southern Brazil, and the unstable-atmosphere patches cover north-central Rio Grande do Sul before dawn on November 20"></video>
+    <figcaption><span lang="pt">Previsão feita em 15/11. Fundo: vapor d'água na coluna. Setas: vento em 850 hPa. Manchas: chance de Índice K acima de 32, laranja acima de 60 % e vermelho acima de 90 %.</span><span lang="en">Forecast made on Nov 15. Background: column water vapour. Arrows: 850 hPa wind. Patches: chance of K-index above 32, orange above 60 % and red above 90 %.</span></figcaption>
+  </figure>
+</div></div>
+
+<section id="temporal"><div class="wrap">
+  <p class="eyebrow"><span lang="pt">Temporal de 20/11/2026</span><span lang="en">The November 20, 2026 storm</span></p>
+  <h2><span lang="pt">O ambiente do temporal aparece quase cinco dias antes</span><span lang="en">The storm environment shows up almost five days ahead</span></h2>
+  <p class="sub" lang="pt">Cada mapa é uma previsão feita num dia diferente. A cor é a fração dos 24 membros em que a atmosfera sobre o lugar fica instável (Índice K acima de 32) entre 19/11 18h e 20/11 12h UTC. Vermelho quer dizer que quase todos os futuros possíveis concordam.</p>
+  <p class="sub" lang="en">Each map is a forecast made on a different day. Colour is the fraction of the 24 members in which the atmosphere over that place becomes unstable (K-index above 32) between Nov 19 18 UTC and Nov 20 12 UTC. Red means almost all possible futures agree.</p>
+  <figure class="fig">
+    <img src="assets/img/slide_kindex.png" width="2844" height="721" loading="lazy" alt="Four maps of Rio Grande do Sul for forecasts made 4.8, 3.8, 2.8 and 1.8 days before the storm; the probability of K-index above 32 is 80 to 100 percent over the north-central part of the state, including Tupanciretã and Passo Fundo, in all runs">
+  </figure>
+  <div class="stats">
+    <div class="stat"><b><span lang="pt">4,8 dias</span><span lang="en">4.8 days</span></b><span lang="pt">de antecedência com 80 a 100 % de chance de atmosfera instável sobre o centro-norte do RS</span><span lang="en">ahead, with 80–100 % chance of an unstable atmosphere over north-central Rio Grande do Sul</span></div>
+    <div class="stat"><b>40–60 %</b><span lang="pt">de chance de mais de 10 mm em 6 h em Tupanciretã, na madrugada do temporal</span><span lang="en">chance of more than 10 mm in 6 h at Tupanciretã, before dawn on the storm day</span></div>
+    <div class="stat"><b>24</b><span lang="pt">futuros simulados por rodada, de 20 a 40 s cada um numa GPU</span><span lang="en">futures simulated per run, 20–40 s each on one GPU</span></div>
+    <div class="stat"><b>25 km</b><span lang="pt">de grade, global, com passo de 6 horas</span><span lang="en">global grid, 6-hour steps</span></div>
+  </div>
+  <div class="cards two" style="margin-top:20px">
+    <figure class="fig">
+      <img src="assets/img/meteograma_tupancireta.png" width="1812" height="1350" loading="lazy" alt="Meteogram at Tupanciretã: probability of gusts above 72 km/h stays at zero, probability of more than 10 mm in 6 h reaches 40 to 60 percent, and probability of K-index above 32 reaches 80 to 100 percent during the storm window, for the four runs">
+      <figcaption><span lang="pt">Tupanciretã, hora a hora. A faixa vermelha é a madrugada do temporal. A rajada acima de 72 km/h fica em zero: em 25 km o modelo não enxerga a rajada de um temporal.</span><span lang="en">Tupanciretã over time. The red band is the storm night. Gusts above 72 km/h stay at zero: at 25 km the model does not see storm gusts.</span></figcaption>
+    </figure>
+    <figure class="fig">
+      <img src="assets/img/painel_3produtos.png" width="2122" height="912" loading="lazy" alt="Three maps from the forecast made on November 15: gusts above 45 km/h with low probability, rain above 20 mm in 6 h with moderate probability west of Tupanciretã, and K-index above 32 with very high probability over the north of the state">
+      <figcaption><span lang="pt">Previsão de 15/11: rajada acima de 45 km/h, chuva acima de 20 mm em 6 h e Índice K. O sinal forte é o da instabilidade.</span><span lang="en">Forecast of Nov 15: gusts above 45 km/h, rain above 20 mm in 6 h, and K-index. The strong signal is instability.</span></figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="maio"><div class="wrap">
+  <p class="eyebrow"><span lang="pt">Enchente de maio de 2024</span><span lang="en">The May 2024 flood</span></p>
+  <h2><span lang="pt">Três dias antes, o modelo apontou onde ia chover</span><span lang="en">Three days ahead, the model pointed to where the rain would fall</span></h2>
+  <p class="sub" lang="pt">Chuva acumulada de 29/04 a 02/05/2024, na previsão feita em 26/04 a partir do ERA5. A região está certa, o volume não: a média do ensemble chega a cerca de 120 mm sobre o RS, contra cerca de 270 mm no ERA5. Mesmo assim, 20 a 40 % dos membros passam de 150 mm no centro-norte do estado.</p>
+  <p class="sub" lang="en">Rainfall from Apr 29 to May 2, 2024, in the forecast made on Apr 26 from ERA5. The region is right, the volume is not: the ensemble mean reaches about 120 mm over the state against about 270 mm in ERA5. Still, 20–40 % of members exceed 150 mm over the north-centre of the state.</p>
+  <figure class="fig">
+    <img src="assets/img/slide_maio2024.png" width="2150" height="685" loading="lazy" alt="Three maps of Rio Grande do Sul for April 29 to May 2, 2024: ERA5 rainfall peaking in the north-centre, the ensemble mean in the same region but weaker, and the probability of exceeding 150 mm at 20 to 40 percent in the north-centre">
+  </figure>
+</div></section>
+
+<section id="limites"><div class="wrap">
+  <h2><span lang="pt">O que o modelo não faz</span><span lang="en">What the model does not do</span></h2>
+  <div class="notice">
+    <p lang="pt"><b>Não enxerga o tornado nem a rajada que derruba o telhado.</b> Numa grade de 25 km, a rajada máxima prevista sobre o RS ficou em cerca de 70 km/h. O que o modelo mostra é o ambiente de risco, com dias de antecedência.</p>
+    <p lang="en"><b>It does not see the tornado or the gust that tears off a roof.</b> On a 25 km grid, the highest forecast gust over the state was about 70 km/h. What the model shows is the risk environment, days ahead.</p>
+    <p lang="pt"><b>Não há ainda modelo regional para o Brasil.</b> Os modelos do Earth-2 que descem para 2 a 3 km, como o StormCast e o CorrDiff, existem hoje só para EUA, Europa e Taiwan. Para o RS seria preciso treinar um, com dados brasileiros de alta resolução.</p>
+    <p lang="en"><b>There is no regional model for Brazil yet.</b> The Earth-2 models that go down to 2–3 km, such as StormCast and CorrDiff, currently exist only for the US, Europe and Taiwan. Rio Grande do Sul would need one trained on high-resolution Brazilian data.</p>
+    <p lang="pt"><b>É pesquisa, não alerta.</b> Nada aqui substitui a previsão oficial nem as orientações da Defesa Civil.</p>
+    <p lang="en"><b>This is research, not a warning service.</b> Nothing here replaces official forecasts or civil defence guidance.</p>
+  </div>
+</div></section>
+
+<section id="como"><div class="wrap">
+  <h2><span lang="pt">Como foi feito</span><span lang="en">How it was done</span></h2>
+  <div class="flow">
+    <div class="step"><h3><span lang="pt">Condição inicial</span><span lang="en">Initial state</span></h3><p lang="pt">GFS (NOAA) para novembro de 2026 e ERA5 (Copernicus/ECMWF) para maio de 2024.</p><p lang="en">GFS (NOAA) for November 2026 and ERA5 (Copernicus/ECMWF) for May 2024.</p></div>
+    <div class="step"><h3>FourCastNet 3</h3><p lang="pt">Modelo global e estocástico: 24 membros, cada um com uma semente diferente, em passos de 6 h.</p><p lang="en">Global stochastic model: 24 members, each with a different seed, in 6-hour steps.</p></div>
+    <div class="step"><h3><span lang="pt">Diagnósticos</span><span lang="en">Diagnostics</span></h3><p lang="pt">Chuva (PrecipitationAFNO), rajada (WindgustAFNO) e Índice K calculado a partir de temperatura e umidade.</p><p lang="en">Rain (PrecipitationAFNO), gusts (WindgustAFNO) and K-index computed from temperature and humidity.</p></div>
+    <div class="step"><h3><span lang="pt">Probabilidade</span><span lang="en">Probability</span></h3><p lang="pt">A fração dos membros que passa de cada limiar vira o mapa de chance.</p><p lang="en">The fraction of members above each threshold becomes the chance map.</p><span class="where">Earth2Studio 0.20.0</span></div>
+  </div>
+</div></section>
+
+<section id="reproduzir"><div class="wrap">
+  <h2><span lang="pt">Reproduzir</span><span lang="en">Reproduce</span></h2>
+  <p class="sub" lang="pt">As rodadas precisam de uma GPU de 80 GB; usamos uma H100 PCIe na NVIDIA Brev, e as cinco rodadas levaram pouco mais de uma hora. Os mapas e a animação rodam em qualquer computador, a partir dos NetCDF gerados.</p>
+  <p class="sub" lang="en">The runs need an 80 GB GPU; we used an H100 PCIe on NVIDIA Brev, and the five runs took a little over an hour. Maps and animation run on any computer, from the generated NetCDF files.</p>
+  <div class="figs">
+    <div class="cmd">git clone https://github.com/ItamarIliuk/earth2-rs-eventos-severos.git
+cd earth2-rs-eventos-severos/code
+bash setup_gpu.sh
+bash run_all.sh</div>
+  </div>
+  <p class="sub" style="margin-top:16px" lang="pt">O <code>setup_gpu.sh</code> explica nos comentários as armadilhas que encontramos: o torch com CUDA 12.6 para um driver de CUDA 12.8, o torchvision fixado na mesma versão e o <code>nvcc</code> para o torch-harmonics compilar a extensão CUDA.</p>
+  <p class="sub" style="margin-top:16px" lang="en"><code>setup_gpu.sh</code> explains in comments the pitfalls we hit: torch built for CUDA 12.6 on a CUDA 12.8 driver, torchvision pinned to the same version, and <code>nvcc</code> so torch-harmonics builds its CUDA extension.</p>
+  <div class="inception" style="margin-top:20px">
+    <div class="logo-box"><img src="assets/img/labriot-logo-512.png" width="512" height="512" alt="LABRIOT logo"></div>
+    <div class="badge-box"><img src="assets/img/nvidia-inception-program-badge-rgb-for-screen.svg" width="501" height="217" alt="NVIDIA Inception Program"></div>
+    <p lang="pt">O LABRIOT é membro do NVIDIA Inception program. Este trabalho faz parte das atividades da Dra. Itamar Iliuk como NVIDIA Omniverse Ambassador e foi apresentado no IA Summit Passo Fundo, em 27 de novembro de 2026.</p>
+    <p lang="en">LABRIOT is a member of the NVIDIA Inception program. This work is part of Dr. Itamar Iliuk's activities as an NVIDIA Omniverse Ambassador and was presented at IA Summit Passo Fundo on November 27, 2026.</p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>© 2026 LABRIOT · UTFPR Ponta Grossa</p>
+  <p lang="pt">Pesquisa em previsão retrospectiva; não é um sistema de alerta. Dados: GFS (NOAA) e ERA5 (Copernicus Climate Change Service/ECMWF). Modelos executados com o Earth2Studio, sob as licenças dos próprios modelos. NVIDIA, Earth-2 e FourCastNet são marcas da NVIDIA. Este projeto não é endossado pela NVIDIA.</p>
+  <p lang="en">Hindcast research; not a warning system. Data: GFS (NOAA) and ERA5 (Copernicus Climate Change Service/ECMWF). Models run with Earth2Studio, under each model's own license. NVIDIA, Earth-2 and FourCastNet are trademarks of NVIDIA. This project is not endorsed by NVIDIA.</p>
+</div></footer>
+</body>
+</html>
