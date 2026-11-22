@@ -64,6 +64,9 @@ Reproduce with `code/setup_gpu.sh` and `code/run_all.sh` on an 80 GB GPU; plotti
 
 ---
 
+Code and figures: MIT License (see `LICENSE`). The LABRIOT logo and the NVIDIA Inception badge are not covered by it;
+model weights and input data keep their own licenses.
+
 Developed at LABRIOT (Laboratório de Robótica e IoT), UTFPR Ponta Grossa, Brazil, as part of Dr. Itamar Iliuk's
 activities as an NVIDIA Omniverse Ambassador. LABRIOT is a member of the NVIDIA Inception program. NVIDIA, Earth-2
 and FourCastNet are trademarks of NVIDIA; this project is not endorsed by NVIDIA.
